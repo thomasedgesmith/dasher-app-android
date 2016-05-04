@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <group android:id="@+id/login_group">
+        <item
+            android:id="@+id/action_login_sign_up"
+            android:title="@string/menu_login_signup"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/action_login_forgot_password"
+            android:title="@string/menu_login_forgot_password"
+            app:showAsAction="never"/>
+
+        <!-- Settings, should always be in the overflow -->
+        <item android:id="@+id/action_login_about_dash"
+            android:title="@string/menu_login_about_dash"
+            app:showAsAction="never"/>
+    </group>
+</menu>

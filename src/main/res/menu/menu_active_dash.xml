@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <group android:id="@+id/active_dash_group">
+        <item
+            android:id="@+id/action_active_dash_finish"
+            android:icon="@drawable/ic_check_circle_24dp"
+            android:title="@string/menu_active_dash_finish"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/action_active_dash_help"
+            android:title="@string/menu_active_dash_help"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_active_dash_details"
+            android:title="@string/menu_active_dash_details"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_active_dash_change_bid"
+            android:title="@string/menu_active_dash_change_bid"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_active_dash_report"
+            android:title="@string/menu_active_dash_report"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_active_dash_cancel"
+            android:title="@string/menu_active_dash_cancel"
+            app:showAsAction="never"/>
+    </group>
+</menu>

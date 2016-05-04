@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Dasher</string>
+    <string name="base_url">https://secure.usedashnow.com</string>
+    <string name="preference_file_key">DASH_DASHER_PREFERENCES</string>
+    <string name="pref_dash_api_key">DASH_APIKEY</string>
+
+    <!-- Strings related to login -->
+    <string name="action_settings">Settings</string>
+    <string name="menu_dashes_profile">Manage Profile</string>
+    <string name="menu_dashes_help">Need Help?</string>
+
+    <string name="activity_available_dashes_title">Available Dashes</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password may be incorrect</string>
+    <string name="error_incorrect_email">This email may be incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_login">Login to Dash</string>
+    <string name="menu_login_signup">Join</string>
+    <string name="menu_login_forgot_password">Forgot Password</string>
+    <string name="menu_login_about_dash">Learn More</string>
+
+    <string name="title_activity_dashes">Available Dashes</string>
+    <string name="title_activity_profile">Your Profile</string>
+    <string name="title_activity_help">Need Help?</string>
+    <string name="title_activity_report_dash">Report Dash</string>
+    <string name="title_activity_active_dash">Your Dash</string>
+
+    <string name="menu_active_dash_help">Need Help?</string>
+    <string name="menu_active_dash_details">Dash Details</string>
+    <string name="menu_active_dash_finish">Finish Dash</string>
+    <string name="menu_active_dash_change_bid">Change Bid</string>
+    <string name="menu_active_dash_report">Report Dash</string>
+    <string name="menu_active_dash_cancel">Cancel Dash</string>
+
+    <string name="title_activity_active_dash_finish">Finish Your Dash</string>
+    <string name="title_activity_active_dash_help">Request Help</string>
+    <string name="title_activity_active_dash_details">Dash Details</string>
+    <string name="title_activity_active_dash_change_bid">Change Dash Bid</string>
+    <string name="title_activity_active_dash_report">Report Dash</string>
+    <string name="title_activity_active_dash_cancel">Cancel Dash</string>
+
+    <string name="title_activity_finish_dash">Finish Your Dash</string>
+    <string name="title_activity_locked_dash">Your Account is Locked</string>
+
+
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.usedashnow.dasher">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Google Services requires a Google account -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Permission to vibrate when receive a notification -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Lets app receive data messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+         Creates a custom permission using "signature" so that only this app
+         can read the messages returned by GCM
+             - YOUR_PACKAGE is your product's package name. E.g. com.example.test
+    -->
+    <permission
+        android:name="com.usedashnow.dasher.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.usedashnow.dasher.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".DashesActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".DashesActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashesActivity" />
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_help"
+            android:parentActivityName=".DashesActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashesActivity" />
+        </activity>
+        <activity
+            android:name=".ReportDashActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_report_dash"
+            android:parentActivityName=".DashesActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashesActivity" />
+        </activity>
+        <activity
+            android:name=".ActiveDashActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ActiveDashFinishActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash_finish"
+            android:parentActivityName=".ActiveDashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActiveDashActivity" />
+        </activity>
+        <activity
+            android:name=".ActiveDashHelpActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash_help"
+            android:parentActivityName=".ActiveDashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActiveDashActivity" />
+        </activity>
+        <activity
+            android:name=".ActiveDashDetailsActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash_details"
+            android:parentActivityName=".ActiveDashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActiveDashActivity" />
+        </activity>
+        <activity
+            android:name=".ActiveDashChangeBidActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash_change_bid"
+            android:parentActivityName=".ActiveDashActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActiveDashActivity" />
+        </activity>
+        <activity
+            android:name=".ActiveDashReportActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash_report"
+            android:parentActivityName=".ActiveDashActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActiveDashActivity" />
+        </activity>
+        <activity
+            android:name=".ActiveDashCancelActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_active_dash_cancel"
+            android:parentActivityName=".ActiveDashActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActiveDashActivity" />
+        </activity>
+        <activity
+            android:name=".FinishDashActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_finish_dash"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".LockedActivity"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_locked_dash"></activity>
+
+
+        <!-- Push Notification Requirements -->
+        <service
+            android:name=".RegistrationIntentService"
+            android:exported="false" />
+        <service
+            android:name=".MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.codepath.gcmquickstart" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".GcmMessageHandler"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
